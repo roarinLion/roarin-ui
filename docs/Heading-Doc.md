@@ -28,7 +28,7 @@ import { theme } from "./theme";
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    {/* Your application components */}
+    {/_ Your application components _/}
   </ThemeProvider>
 );
 
@@ -55,15 +55,12 @@ You can customize the appearance of the Heading component by passing additional 
 
 ```javascript
 <Heading
-  level="h1"
-  fontSize="3rem"
-  color="blue"
-  fontWeight="bold"
-  textAlign="center"
-  my={4}
->
-  Custom H1 Heading
-</Heading>
+level="h1"
+fontSize="3rem"
+color="blue"
+fontWeight="bold"
+textAlign="center"
+my={4}
 ```
 
 In this example, the custom H1 Heading will have a font size of 3rem, blue color, bold font weight, centered text alignment, and a margin of 4 units (based on your theme configuration) on the top and bottom.
@@ -77,35 +74,36 @@ Example theme configuration:
 
 ```javascript
 export const theme = {
-  fontSizes: {
-    h1: '2.5rem',
-    h2: '2rem',
-    h3: '1.75rem',
-    h4: '1.5rem',
-    h5: '1.25rem',
-    h6: '1rem',
-  },
-  colors: {
-    text: '#333',
-  },
-  lineHeights: {
-    heading: '1.2',
-  },
-  letterSpacing: {
-    tight: '-0.05rem',
-    normal: '0',
-  },
-  fontFamily: {
-    primary: 'Roboto, sans-serif',
-  },
-  fontWeight: {
-    normal: 500,
-    bold: 600,
-  },
-  textAlign: {
-    left: 'left',
-    center: 'center',
-    right:'right', },
+fontSizes: {
+h1: '2.5rem',
+h2: '2rem',
+h3: '1.75rem',
+h4: '1.5rem',
+h5: '1.25rem',
+h6: '1rem',
+},
+colors: {
+text: '#333',
+},
+lineHeights: {
+heading: '1.2',
+},
+letterSpacing: {
+tight: '-0.05rem',
+normal: '0',
+},
+fontFamily: {
+primary: 'Roboto, sans-serif',
+},
+fontWeight: {
+normal: 500,
+bold: 600
+},
+textAlign: {
+left: 'left',
+center: 'center',
+right: 'right',
+},
 space: { // Define your spacing scale here },
 };
 ```

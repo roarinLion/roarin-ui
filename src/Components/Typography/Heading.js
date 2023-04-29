@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { useTheme } from "styled-components";
 import {
   compose,
@@ -50,16 +51,10 @@ const StyledHeading = styled(({ level, children, ...rest }) =>
 const Heading = ({ level = "h1", children, ...rest }) => {
   const theme = useTheme();
 
+  // Merge default and level-specific configurations from the theme
   const defaultProps = {
-    fontSize: theme.fontSizes[level],
-    color: theme.colors.text,
-    lineHeight: theme.lineHeights.heading,
-    letterSpacing:
-      level === "h1" ? theme.letterSpacing.tight : theme.letterSpacing.normal,
-    fontFamily: theme.fontFamily.primary,
-    fontWeight: theme.fontWeight.normal,
-    textAlign: theme.textAlign.left,
-    m: 0,
+    ...theme.headings.default,
+    ...theme.headings[level],
   };
 
   return (
@@ -70,3 +65,12 @@ const Heading = ({ level = "h1", children, ...rest }) => {
 };
 
 export default Heading;
+
+Heading.propTypes = {
+  level: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
+  children: PropTypes.node.isRequired,
+};
+
+Heading.defaultProps = {
+  level: "h1",
+};
