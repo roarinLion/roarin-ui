@@ -22,6 +22,7 @@
  *   const foo = 'bar';
  * </Code>
  */
+
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import {
