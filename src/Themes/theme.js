@@ -73,29 +73,68 @@ export const lightTheme = {
     onErrorContainer: "#410e0b",
   },
 };
+
 lightTheme.elevation = Elevation(lightTheme);
+
 export const darkTheme = {
   colors: {
     ...CommonColors,
+    //background
     background: "#1c1b1f",
+    onBackground: "#e6e1e5",
 
-    primary: "rgba(208,188,255,1)",
-    onPrimary: "rgba(56,30,114,1)",
+    // surface
+    surface: "#1c1b1f",
+    onSurface: "#e6e1e5",
 
+    //surface levels
+    surface1: "#25232a",
+    surface2: "#2b2831",
+    surface3: "#302d38",
+    surface4: "#322f3a",
+    surface5: "#35313f",
+
+    // surface variant and outline color
+    surfaceVariant: "#49454f",
+    onSurfaceVariant: "#cac4d0",
+    outline: "#938f99",
+
+    // primary
+    primary: "#d0bcff",
+    onPrimary: "#381e72",
+
+    // primary container
     primaryContainer: "#4f378b",
     onPrimaryContainer: "#eaddff",
 
+    // secondary
+    secondary: "#ccc2dc",
+    onSecondary: "#332d41",
+
+    // secondary container
     secondaryContainer: "#4a4458",
     onSecondaryContainer: "#e8def8",
 
-    onSurface: "rgba(230,225,229,1)",
+    // tertiary
+    tertiary: "#efb8c8",
+    onTertiary: "#492532",
 
-    outline: "rgba(147,143,153,1)",
+    // tertiary container
+    tertiaryContainer: "#633b48",
+    onTertiaryContainer: "#ffd8e4",
 
-    error: "rgba(179,38,30,1)",
+    // error
+    error: "#f2b8b5",
+    onError: "#601410",
+
+    // error container
+    errorContainer: "#8c1d18",
+    onErrorContainer: "#f9dedc",
   },
 };
+
 darkTheme.elevation = Elevation(darkTheme);
+
 export const theme = {
   fontSizes: {
     // Heading font sizes

@@ -1,20 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledIcon } from "./Icon.styled";
+import { commonButtonStyles } from "./ButtonBase.styled";
 
 // Button base
-const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
+const StyledButton = styled.div`
+  ${commonButtonStyles}
   background-color: ${(props) => props.theme.colors.primary};
   border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 
   &:disabled {
     background-color: ${(props) => props.theme.colors.transparentBlack};
-    padding: 10px 24px;
+    padding: 0px 24px;
   }
 `;
 
@@ -23,6 +20,7 @@ const StateLayer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  padding: 0px 24px;
   align-items: center;
   justify-content: center;
   gap: 8;
@@ -33,13 +31,9 @@ const StateLayer = styled.div`
     cursor: pointer;
   }
 
-  &:active {
-    background-color: ${(props) => props.theme.colors.transparentWhite};
-  }
-
+  &:active,
   &:focus {
     background-color: ${(props) => props.theme.colors.transparentWhite};
-    padding: 1px;
   }
 `;
 
@@ -68,11 +62,11 @@ const FilledButton = ({ icon }) => {
       // handle button click
     }
   };
+
   return (
     <StyledButton onClick={handleClick} onKeyDown={handleClick}>
       <StateLayer>
         {icon && <StyledIcon>{icon}</StyledIcon>}
-        {/* conditionally render icon */}
         <LabelText>Filled</LabelText>
       </StateLayer>
     </StyledButton>

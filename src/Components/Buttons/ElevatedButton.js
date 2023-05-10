@@ -1,20 +1,29 @@
 import React from "react";
 import styled from "styled-components";
+import { commonButtonStyles } from "./ButtonBase.styled";
 
 // Button base
-const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
-  background-color: ${(props) => props.theme.colors.secondaryContainer};
-  overflow: hidden;
-  border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+const StyledButton = styled.div`
+  ${commonButtonStyles}
+  background: rgba(103, 80, 164, 0.05);
   width: fit-content;
+  box-shadow: 0 1px 2px 0 ${(props) => props.theme.colors.transparentBlack4},
+    0 1px 3px 1px ${(props) => props.theme.colors.transparentBlack3};
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.m3SourceTertiary};
+    box-shadow: 0 1px 2px 0 ${(props) => props.theme.colors.transparentBlack4},
+      0 2px 6px 2px ${(props) => props.theme.colors.transparentBlack3};
+    align-items: flex-start;
+  }
 
   &:disabled {
     background-color: ${(props) => props.theme.colors.transparentBlack};
-    padding: 0px 24px;
+  }
+
+  &:active,
+  &:focus {
+    align-items: flex-start;
   }
 `;
 
@@ -28,25 +37,17 @@ const StateLayer = styled.div`
   justify-content: center;
   gap: 8;
 
-  &:hover {
-    background-color: ${(props) => props.theme.colors.transparentWhite2};
-    box-shadow: 0 4px 4px 0 ${(props) => props.theme.colors.transparentBlack2};
-    cursor: pointer;
-  }
-
-  &:active {
-    background-color: ${(props) => props.theme.colors.transparentWhite};
-  }
-
+  &:hover,
+  &:active,
   &:focus {
-    background-color: ${(props) => props.theme.colors.transparentWhite};
-    padding: 1px;
+    background-color: ${(props) => props.theme.colors.transparentSlateBlue};
+    flex: 1;
+    align-self: stretch;
   }
 `;
 
 // labelText
 const LabelText = styled.p`
-  color: ${(props) => props.theme.colors.onSecondaryContainer};
   text-align: center;
   letter-spacing: 0.1px;
   font-family: ${(props) => props.theme.fonts.labelLarge.family};
@@ -54,9 +55,15 @@ const LabelText = styled.p`
   font-weight: ${(props) => props.theme.fonts.labelLarge.weight};
   line-height: ${(props) => props.theme.fonts.labelLarge.lineHeight};
 
+  color: ${(props) => props.theme.colors.primary};
+
   &:disabled {
     color: ${(props) => props.theme.colors.onSurface};
     opacity: 0.38;
+  }
+
+  &:focus {
+    color: ${(props) => props.theme.colors.m3SysLightPrimary};
   }
 `;
 
@@ -64,10 +71,10 @@ const StyledIcon = styled.div`
   margin-right: 4px;
   width: 18px;
   height: 18px;
-  color: ${(props) => props.theme.colors.onSecondaryContainer};
+  color: ${(props) => props.theme.colors.primary};
 `;
 
-const TonalButton = ({ icon }) => {
+const ElevatedButton = ({ icon }) => {
   const handleClick = (event) => {
     if (
       event.type === "click" ||
@@ -76,15 +83,15 @@ const TonalButton = ({ icon }) => {
       // handle button click
     }
   };
+
   return (
     <StyledButton onClick={handleClick} onKeyDown={handleClick}>
       <StateLayer>
         {icon && <StyledIcon>{icon}</StyledIcon>}
-        {/* conditionally render icon */}
-        <LabelText>Tonal</LabelText>
+        <LabelText>Elevated</LabelText>
       </StateLayer>
     </StyledButton>
   );
 };
 
-export default TonalButton;
+export default ElevatedButton;

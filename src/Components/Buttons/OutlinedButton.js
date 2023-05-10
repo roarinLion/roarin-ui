@@ -8,6 +8,7 @@ const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: fit-content;
   justify-content: center;
   border: 1px solid ${(props) => props.theme.colors.outline};
 
@@ -22,6 +23,7 @@ const StateLayer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  padding: 0px 24px;
   align-items: center;
   justify-content: center;
   gap: 8;
