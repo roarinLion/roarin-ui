@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { StyledIcon } from "./Icon.styled";
 
 // Button base
 const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
@@ -18,7 +19,7 @@ const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
 `;
 
 // Statelayer
-const Statelayer = styled.div`
+const StateLayer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -58,13 +59,6 @@ const LabelText = styled.p`
   }
 `;
 
-// StyledIcon
-const StyledIcon = styled.img`
-  margin-right: 8px;
-  width: 18px;
-  height: 18px;
-`;
-
 const FilledButton = ({ icon }) => {
   const handleClick = (event) => {
     if (
@@ -76,11 +70,11 @@ const FilledButton = ({ icon }) => {
   };
   return (
     <StyledButton onClick={handleClick} onKeyDown={handleClick}>
-      <Statelayer>
-        {icon && <StyledIcon src={icon} alt="" />}{" "}
+      <StateLayer>
+        {icon && <StyledIcon>{icon}</StyledIcon>}
         {/* conditionally render icon */}
         <LabelText>Filled</LabelText>
-      </Statelayer>
+      </StateLayer>
     </StyledButton>
   );
 };

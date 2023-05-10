@@ -12,7 +12,7 @@ import TextArea from "./Components/Forms/TextArea";
 import Input from "./Components/Forms/Input";
 import FilledButton from "./Components/Buttons/FilledButton";
 import OutlinedButton from "./Components/Buttons/OutlinedButton";
-
+import { MdAddTask } from "react-icons/md";
 function App() {
   const [isLightTheme, setIsLightTheme] = useState(true);
 
@@ -28,10 +28,18 @@ function App() {
       {/* The ThemeProvider component is used to provide the theme to all styled components in the application */}
       <Container p={5} bg="background">
         <Container maxWidth="1620px">
+          <br />
           <button onClick={toggleTheme}>Toggle theme</button>
+          <br /> <br />
           <FilledButton />
           <br />
+          <FilledButton icon={<MdAddTask />} />
+          <br />
           <OutlinedButton />
+          <br />
+          <OutlinedButton icon={<MdAddTask />} />
+          <br />
+          <br />
           {/* The Container component provides a responsive container for all the UI elements */}
           <Heading level="h1">This is an H1 Heading</Heading>
           <Heading level="h3">This is an H2 Heading</Heading>

@@ -58,11 +58,11 @@ const LabelText = styled.p`
   }
 `;
 
-// StyledIcon
-const StyledIcon = styled.img`
-  margin-right: 8px;
+const StyledIcon = styled.div`
+  margin-right: 4px;
   width: 18px;
   height: 18px;
+  color: ${(props) => props.theme.colors.primary};
 `;
 
 const OutlinedButton = ({ icon }) => {
@@ -77,7 +77,7 @@ const OutlinedButton = ({ icon }) => {
   return (
     <StyledButton onClick={handleClick} onKeyDown={handleClick}>
       <StateLayer>
-        {icon && <StyledIcon src={icon} alt="" />}{" "}
+        {icon && <StyledIcon>{icon}</StyledIcon>}
         {/* conditionally render icon */}
         <LabelText>Outlined</LabelText>
       </StateLayer>
