@@ -1,98 +1,79 @@
-const CommonColors = {
-  black: "rgba(0,0,0,1)",
-  errorError10: "rgba(65,14,11,1)",
-  error20: "rgba(96,20,16,1)",
-  error30: "rgba(140,29,24,1)",
-  error50: "rgba(220,54,46,1)",
-  error60: "rgba(228,105,98,1)",
-  error70: "rgba(236,146,142,1)",
-  error80: "rgba(242,184,181,1)",
-  error90: "rgba(249,222,220,1)",
-  error95: "rgba(252,238,238,1)",
-  error99: "rgba(255,251,249,1)",
-  neutral20: "rgba(49,48,51,1)",
-  neutral30: "rgba(72,70,73,1)",
-  neutral40: "rgba(96,93,98,1)",
-  neutral50: "rgba(120,117,121,1)",
-  neutral60: "rgba(147,144,148,1)",
-  neutral70: "rgba(174,170,174,1)",
-  neutral80: "rgba(201,197,202,1)",
-  neutral95: "rgba(244,239,244,1)",
-  neutralVariant10: "rgba(29,26,34,1)",
-  neutralVariant20: "rgba(50,47,55,1)",
-  neutralVariant30: "rgba(73,69,79,1)",
-  neutralVariant40: "rgba(96,93,102,1)",
-  neutralVariant70: "rgba(174,169,180,1)",
-  neutralVariant80: "rgba(202,196,208,1)",
-  neutralVariant90: "rgba(231,224,236,1)",
-  neutralVariant95: "rgba(245,238,250,1)",
-  primary10: "rgba(33,0,93,1)",
-  primary30: "rgba(79,55,139,1)",
-  primary50: "rgba(127,103,190,1)",
-  primary60: "rgba(154,130,219,1)",
-  primary70: "rgba(182,157,248,1)",
-  primary95: "rgba(246,237,255,1)",
-  secondary20: "rgba(51,45,65,1)",
-  secondary40: "rgba(98,91,113,1)",
-  secondary50: "rgba(122,114,137,1)",
-  secondary60: "rgba(149,141,165,1)",
-  secondary70: "rgba(176,167,192,1)",
-  secondary80: "rgba(204,194,220,1)",
-  tertiary10: "rgba(49,17,29,1)",
-  tertiary20: "rgba(73,37,50,1)",
-  tertiary30: "rgba(99,59,72,1)",
-  tertiary50: "rgba(152,105,119,1)",
-  tertiary60: "rgba(181,131,146,1)",
-  tertiary70: "rgba(210,157,172,1)",
-  tertiary80: "rgba(239,184,200,1)",
-  tertiary90: "rgba(255,216,228,1)",
-  tertiary95: "rgba(255,236,241,1)",
-  tertiary99: "rgba(255,251,250,1)",
-  sourceTertiary: "rgba(125,82,96,1)",
-  transparentBlack: "rgba(31,31,31,0.12)",
-  transparentBlack2: "rgba(0,0,0,0.25)",
-  transparentBlack3: "rgba(0,0,0,0.15)",
-  transparentBlack4: "rgba(0,0,0,0.3)",
-  transparentBlack5: "rgba(29,25,43,0.08)",
-  transparentBlack6: "rgba(29,25,43,0.12)",
-  transparentGainsboro: "rgba(227,227,227,0.12)",
-  transparentLavender: "rgba(232,222,248,0.08)",
-  transparentLavender2: "rgba(232,222,248,0.12)",
-  transparentSlateBlue: "rgba(103,80,164,0.12)",
-  transparentSlateBlue2: "rgba(103,80,164,0.08)",
-  transparentSlateBlue3: "rgba(103,80,164,0.05)",
-  transparentSlateBlue4: "rgba(103,80,164,0.11)",
-  transparentSlateBlue5: "rgba(103,80,164,0.14)",
-  transparentThistle: "rgba(208,188,255,0.12)",
-  transparentThistle2: "rgba(208,188,255,0.08)",
-  transparentThistle3: "rgba(208,188,255,0.05)",
-  transparentThistle4: "rgba(208,188,255,0.11)",
-  transparentThistle5: "rgba(208,188,255,0.14)",
-  transparentWhite: "rgba(255,255,255,0.12)",
-  transparentWhite2: "rgba(255,255,255,0.08)",
-};
+import { CommonColors } from "./colors";
+
+const Elevation = (theme) => ({
+  elevation1: `0 1px 3px 1px ${theme.colors.transparentBlack3},
+    0 1px 2px 0 ${theme.colors.transparentBlack4}`,
+  elevation2: `0 2px 6px 2px ${theme.colors.transparentBlack3},
+    0 1px 2px 0 ${theme.colors.transparentBlack4}`,
+  elevation3: `0 1px 3px 0 ${theme.colors.transparentBlack4},
+    0 4px 8px 3px ${theme.colors.transparentBlack3}`,
+  elevation4: `0 2px 3px 0 ${theme.colors.transparentBlack4},
+    0 6px 10px 4px ${theme.colors.transparentBlack3}`,
+  elevation5: `0 4px 4px 0 ${theme.colors.transparentBlack4},
+    0 8px 12px 6px ${theme.colors.transparentBlack3}`,
+
+  // Add more elevations here
+});
 
 export const lightTheme = {
   colors: {
     ...CommonColors,
+    //background
     background: "#fffbfe",
+    onBackground: "#fffbfe",
+
+    // surface
+    surface: "#fffbfe",
+    onSurface: "#1c1b1f",
+
+    //surface levels
+    surface1: "#f7f2f9",
+    surface2: "#f3edf7",
+    surface3: "#eee8f4",
+    surface4: "#ece6f3",
+    surface5: "#e9e3f1",
+
+    // surface variant and outline color
+    surfaceVariant: "#fffbfe",
+    onSurfaceVariant: "#49454f",
+    outline: "#49454f",
+
+    // elevation
+
+    // primary
     primary: "#6750a4",
     onPrimary: "#fff",
 
+    // primary container
     primaryContainer: "#eaddff",
     onPrimaryContainer: "#21005d",
 
+    // secondary
+    secondary: "#625b71",
+    onSecondary: "#fff",
+
+    // secondary container
     secondaryContainer: "#e8def8",
     onSecondaryContainer: "#1d192b",
 
-    surface1: "rgba(255,251,254,1)",
-    onSurface: "rgba(28,27,31,1)",
+    // tertiary
+    tertiary: "#7d5260",
+    onTertiary: "#fff",
 
-    outline: "rgba(121,116,126,1)",
-    error: "rgba(179,38,30,1)",
+    // tertiary container
+    tertiaryContainer: "#ffd8e4",
+    onTertiaryContainer: "#31111d",
+
+    // error
+    error: "#b3261e",
+    onError: "#fff",
+
+    // error container
+    errorContainer: "#f9dedc",
+    onErrorContainer: "#410e0b",
   },
 };
-
+lightTheme.elevation = Elevation(lightTheme);
 export const darkTheme = {
   colors: {
     ...CommonColors,
@@ -108,11 +89,13 @@ export const darkTheme = {
     onSecondaryContainer: "#e8def8",
 
     onSurface: "rgba(230,225,229,1)",
+
     outline: "rgba(147,143,153,1)",
+
     error: "rgba(179,38,30,1)",
   },
 };
-
+darkTheme.elevation = Elevation(darkTheme);
 export const theme = {
   fontSizes: {
     // Heading font sizes

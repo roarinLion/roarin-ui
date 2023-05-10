@@ -14,6 +14,38 @@ import FilledButton from "./Components/Buttons/FilledButton";
 import OutlinedButton from "./Components/Buttons/OutlinedButton";
 import { MdAddTask } from "react-icons/md";
 import TonalButton from "./Components/Buttons/TonalButton";
+import styled from "styled-components";
+
+const ElevationOne = styled.div`
+  box-shadow: ${(props) => props.theme.elevation.elevation1};
+  padding: 20px;
+  border-radius: 8px;
+`;
+
+const ElevationTwo = styled.div`
+  box-shadow: ${(props) => props.theme.elevation.elevation2};
+  padding: 20px;
+  border-radius: 8px;
+`;
+
+const ElevationThree = styled.div`
+  box-shadow: ${(props) => props.theme.elevation.elevation3};
+  padding: 20px;
+  border-radius: 8px;
+`;
+
+const ElevationFour = styled.div`
+  box-shadow: ${(props) => props.theme.elevation.elevation4};
+  padding: 20px;
+  border-radius: 8px;
+`;
+
+const ElevationFive = styled.div`
+  box-shadow: ${(props) => props.theme.elevation.elevation5};
+  padding: 20px;
+  border-radius: 8px;
+`;
+
 function App() {
   const [isLightTheme, setIsLightTheme] = useState(true);
 
@@ -29,9 +61,20 @@ function App() {
       {/* The ThemeProvider component is used to provide the theme to all styled components in the application */}
       <Container p={5} bg="background">
         <Container maxWidth="1620px">
-          <br />
+          <br /> <br />
           <button onClick={toggleTheme}>Toggle theme</button>
           <br /> <br />
+          <br /> <br />
+          <ElevationOne>This is a component with elevation1</ElevationOne>
+          <br />
+          <ElevationTwo>This is a component with elevation2</ElevationTwo>
+          <br />
+          <ElevationThree>This is a component with elevation3</ElevationThree>
+          <br />
+          <ElevationFour>This is a component with elevation4</ElevationFour>
+          <br />
+          <ElevationFive>This is a component with elevation5</ElevationFive>
+          <br /> <br /> <br /> <br />
           <FilledButton />
           <br />
           <FilledButton icon={<MdAddTask />} />
