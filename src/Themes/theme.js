@@ -1,3 +1,25 @@
+export const lightTheme = {
+  colors: {
+    onPrimary: "rgba(255,255,255,1)",
+    onSecondaryContainer: "rgba(29,25,43,1)",
+    surfacesSurface1: "rgba(255,251,254,1)",
+    onSurface: "rgba(28,27,31,1)",
+    outline: "rgba(121,116,126,1)",
+    primary: "rgba(103,80,164,1)",
+  },
+};
+
+export const darkTheme = {
+  colors: {
+    onPrimary: "rgba(56,30,114,1)",
+    onSecondaryContainer: "rgba(232,222,248,1)",
+    onSurface: "rgba(230,225,229,1)",
+    outline: "rgba(147,143,153,1)",
+    primary: "rgba(208,188,255,1)",
+    secondaryContainer: "rgba(74,68,88,1)",
+  },
+};
+
 export const theme = {
   fontSizes: {
     // Heading font sizes
@@ -13,8 +35,13 @@ export const theme = {
     blockquote: "1.25rem",
     code: "0.875rem",
   },
-  colors: {
-    text: "#333",
+  fonts: {
+    LabelLarge: {
+      family: "Roboto, sans-serif",
+      size: "14px",
+      weight: "500",
+      lineHeight: "20px",
+    },
   },
   lineHeights: {
     heading: "1.2",
