@@ -75,28 +75,41 @@ const CommonColors = {
 export const lightTheme = {
   colors: {
     ...CommonColors,
-    background: "#fff",
-    onPrimary: "rgba(255,255,255,1)",
-    primaryContainer: "rgba(234,221,255,1)",
-    onSecondaryContainer: "rgba(29,25,43,1)",
-    surfacesSurface1: "rgba(255,251,254,1)",
+    background: "#fffbfe",
+    primary: "#6750a4",
+    onPrimary: "#fff",
+
+    primaryContainer: "#eaddff",
+    onPrimaryContainer: "#21005d",
+
+    secondaryContainer: "#e8def8",
+    onSecondaryContainer: "#1d192b",
+
+    surface1: "rgba(255,251,254,1)",
     onSurface: "rgba(28,27,31,1)",
+
     outline: "rgba(121,116,126,1)",
-    primary: "rgba(103,80,164,1)",
-    lightError: "rgba(179,38,30,1)",
+    error: "rgba(179,38,30,1)",
   },
 };
 
 export const darkTheme = {
   colors: {
     ...CommonColors,
-    background: "#1f1f1f",
+    background: "#1c1b1f",
+
+    primary: "rgba(208,188,255,1)",
     onPrimary: "rgba(56,30,114,1)",
-    onSecondaryContainer: "rgba(232,222,248,1)",
+
+    primaryContainer: "#4f378b",
+    onPrimaryContainer: "#eaddff",
+
+    secondaryContainer: "#4a4458",
+    onSecondaryContainer: "#e8def8",
+
     onSurface: "rgba(230,225,229,1)",
     outline: "rgba(147,143,153,1)",
-    primary: "rgba(208,188,255,1)",
-    secondaryContainer: "rgba(74,68,88,1)",
+    error: "rgba(179,38,30,1)",
   },
 };
 

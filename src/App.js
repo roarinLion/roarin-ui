@@ -13,6 +13,7 @@ import Input from "./Components/Forms/Input";
 import FilledButton from "./Components/Buttons/FilledButton";
 import OutlinedButton from "./Components/Buttons/OutlinedButton";
 import { MdAddTask } from "react-icons/md";
+import TonalButton from "./Components/Buttons/TonalButton";
 function App() {
   const [isLightTheme, setIsLightTheme] = useState(true);
 
@@ -39,6 +40,9 @@ function App() {
           <br />
           <OutlinedButton icon={<MdAddTask />} />
           <br />
+          <TonalButton />
+          <br />
+          <TonalButton icon={<MdAddTask />} />
           <br />
           {/* The Container component provides a responsive container for all the UI elements */}
           <Heading level="h1">This is an H1 Heading</Heading>
