@@ -1,5 +1,6 @@
 export const lightTheme = {
   colors: {
+    background: "#fff",
     onPrimary: "rgba(255,255,255,1)",
     onSecondaryContainer: "rgba(29,25,43,1)",
     surfacesSurface1: "rgba(255,251,254,1)",
@@ -11,6 +12,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   colors: {
+    background: "#1f1f1f",
     onPrimary: "rgba(56,30,114,1)",
     onSecondaryContainer: "rgba(232,222,248,1)",
     onSurface: "rgba(230,225,229,1)",
@@ -36,7 +38,7 @@ export const theme = {
     code: "0.875rem",
   },
   fonts: {
-    LabelLarge: {
+    labelLarge: {
       family: "Roboto, sans-serif",
       size: "14px",
       weight: "500",

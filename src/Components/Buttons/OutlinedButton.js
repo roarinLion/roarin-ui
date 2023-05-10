@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 // Button base
 const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
-  background-color: ${(props) => props.theme.colors.primary};
+  overflow: hidden;
   border-radius: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  border: 1px solid ${(props) => props.theme.colors.outline};
 
   &:disabled {
     background-color: ${(props) => props.theme.colors.transparentBlack};
@@ -17,8 +17,8 @@ const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
   }
 `;
 
-// Statelayer
-const Statelayer = styled.div`
+// StateLayer
+const StateLayer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -42,9 +42,9 @@ const Statelayer = styled.div`
   }
 `;
 
-// labelText
+// LabelText
 const LabelText = styled.p`
-  color: ${(props) => props.theme.colors.onPrimary};
+  color: ${(props) => props.theme.colors.primary};
   text-align: center;
   letter-spacing: 0.1px;
   font-family: ${(props) => props.theme.fonts.labelLarge.family};
@@ -65,7 +65,7 @@ const StyledIcon = styled.img`
   height: 18px;
 `;
 
-const FilledButton = ({ icon }) => {
+const OutlinedButton = ({ icon }) => {
   const handleClick = (event) => {
     if (
       event.type === "click" ||
@@ -76,13 +76,13 @@ const FilledButton = ({ icon }) => {
   };
   return (
     <StyledButton onClick={handleClick} onKeyDown={handleClick}>
-      <Statelayer>
+      <StateLayer>
         {icon && <StyledIcon src={icon} alt="" />}{" "}
         {/* conditionally render icon */}
-        <LabelText>Filled</LabelText>
-      </Statelayer>
+        <LabelText>Outlined</LabelText>
+      </StateLayer>
     </StyledButton>
   );
 };
 
-export default FilledButton;
+export default OutlinedButton;
