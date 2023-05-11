@@ -8,6 +8,7 @@ const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
   box-shadow: 0 1px 2px 0 ${(props) => props.theme.colors.transparentBlack4},
     0 1px 3px 1px ${(props) => props.theme.colors.transparentBlack3};
   color: ${(props) => props.theme.colors.tertiary};
+  background-color: ${(props) => props.theme.colors.transparentSlateBlue};
   padding: 0;
 
   &:hover {
@@ -26,6 +27,8 @@ const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
   &:active,
   &:focus {
     align-items: flex-start;
+    background-color: ${(props) => props.theme.colors.transparentSlateBlue};
+    color: ${(props) => props.theme.colors.tertiary};
   }
 `;
 
@@ -44,7 +47,6 @@ const StateLayer = styled.div`
     background-color: ${(props) => props.theme.colors.transparentSlateBlue};
     flex: 1;
     align-self: stretch;
-    color: ${(props) => props.theme.colors.onTertiary};
   }
 `;
 
