@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { commonButtonStyles } from "./ButtonBase.styled";
 
 // Button base
 const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
+  ${commonButtonStyles}
   background-color: ${(props) => props.theme.colors.secondaryContainer};
   overflow: hidden;
   border-radius: 100px;
   display: flex;
+  padding: 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;

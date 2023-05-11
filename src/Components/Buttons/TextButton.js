@@ -1,14 +1,39 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledIcon } from "./Icon.styled";
 import { commonButtonStyles } from "./ButtonBase.styled";
 
 // Button base
-const StyledButton = styled.div`
+const StyledButton = styled.div.attrs({ role: "button", tabindex: "0" })`
   ${commonButtonStyles}
-  background-color: ${(props) => props.theme.colors.primary};
+  overflow: hidden;
   border-radius: 100px;
+  display: flex;
   padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.transparentSlateBlue2};
+    overflow: hidden;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:focus,
+  &:active {
+    background-color: ${(props) => props.theme.colors.transparentSlateBlue};
+    overflow: hidden;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   &:disabled {
     background-color: ${(props) => props.theme.colors.transparentBlack};
     padding: 0px 24px;
@@ -31,29 +56,39 @@ const StateLayer = styled.div`
     cursor: pointer;
   }
 
-  &:active,
+  &:active {
+    background-color: ${(props) => props.theme.colors.transparentWhite};
+  }
+
   &:focus {
     background-color: ${(props) => props.theme.colors.transparentWhite};
+    padding: 1px;
   }
 `;
 
 // labelText
 const LabelText = styled.p`
-  color: ${(props) => props.theme.colors.onPrimary};
+  color: ${(props) => props.theme.colors.primary};
   text-align: center;
   letter-spacing: 0.1px;
   font-family: ${(props) => props.theme.fonts.labelLarge.family};
   font-size: ${(props) => props.theme.fonts.labelLarge.size};
   font-weight: ${(props) => props.theme.fonts.labelLarge.weight};
   line-height: ${(props) => props.theme.fonts.labelLarge.lineHeight};
-
   &:disabled {
     color: ${(props) => props.theme.colors.onSurface};
     opacity: 0.38;
   }
 `;
 
-const FilledButton = ({ icon }) => {
+const StyledIcon = styled.div`
+  margin-right: 4px;
+  width: 18px;
+  height: 18px;
+  color: ${(props) => props.theme.colors.onSecondaryContainer};
+`;
+
+const TextButton = ({ icon }) => {
   const handleClick = (event) => {
     if (
       event.type === "click" ||
@@ -62,15 +97,15 @@ const FilledButton = ({ icon }) => {
       // handle button click
     }
   };
-
   return (
     <StyledButton onClick={handleClick} onKeyDown={handleClick}>
       <StateLayer>
         {icon && <StyledIcon>{icon}</StyledIcon>}
-        <LabelText>Filled</LabelText>
+        {/* conditionally render icon */}
+        <LabelText>Text</LabelText>
       </StateLayer>
     </StyledButton>
   );
 };
 
-export default FilledButton;
+export default TextButton;

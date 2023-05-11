@@ -16,6 +16,7 @@ import { MdAddTask } from "react-icons/md";
 import TonalButton from "./Components/Buttons/TonalButton";
 import styled from "styled-components";
 import ElevatedButton from "./Components/Buttons/ElevatedButton";
+import TextButton from "./Components/Buttons/TextButton";
 
 const ElevationOne = styled.div`
   box-shadow: ${(props) => props.theme.elevation.elevation1};
@@ -94,8 +95,16 @@ function App() {
           <br />
           <ElevatedButton icon={<MdAddTask />} />
           <br />
+          <br />
+          <TextButton />
+          <br />
+          <br />
+          <TextButton icon={<MdAddTask />} />
+          <br />
           {/* The Container component provides a responsive container for all the UI elements */}
-          <Heading level="h1">This is an H1 Heading</Heading>
+          <Heading level="h1" variant="displaySmall">
+            This is an H1 Heading
+          </Heading>
           <Heading level="h3">This is an H2 Heading</Heading>
           <Heading level="h3">This is an H3 Heading</Heading>
           <Heading level="h4">This is an H4 Heading</Heading>

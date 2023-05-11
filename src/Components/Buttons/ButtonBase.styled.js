@@ -7,4 +7,7 @@ export const commonButtonStyles = `
   overflow: hidden;
   width: fit-content;
   border-radius: 100px;
+  &:hover{
+    cursor: pointer;
+  }
 `;

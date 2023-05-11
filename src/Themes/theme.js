@@ -129,7 +129,7 @@ export const darkTheme = {
 
     // error container
     errorContainer: "#8c1d18",
-    onErrorContainer: "#f9dedc",
+    onErrorContainer: "#410e0b",
   },
 };
 
@@ -151,11 +151,53 @@ export const theme = {
     code: "0.875rem",
   },
   fonts: {
+    inter12Regular: {
+      family: "Inter",
+      size: "12px",
+      weight: "400",
+      lineHeight: "normal",
+    },
+    displayLarge: {
+      family: "Roboto, sans-serif",
+      size: "57px",
+      weight: "400",
+      lineHeight: "64px",
+    },
+    displayMedium: {
+      family: "Roboto",
+      size: "45px",
+      weight: "400",
+      lineHeight: "52px",
+    },
+    displaySmall: {
+      family: "Roboto",
+      size: "36px",
+      weight: "400",
+      lineHeight: "44px",
+    },
     labelLarge: {
       family: "Roboto, sans-serif",
       size: "14px",
       weight: "500",
       lineHeight: "20px",
+    },
+    roboto16Medium: {
+      family: "Roboto, sans-serif",
+      size: "16px",
+      weight: "500",
+      lineHeight: "24px",
+    },
+    roboto18Regular: {
+      family: "Roboto, sans-serif",
+      size: "18px",
+      weight: "400",
+      lineHeight: "24px",
+    },
+    roboto18RegularLine28: {
+      family: "Roboto, sans-serif",
+      size: "18px",
+      weight: "400",
+      lineHeight: "28px",
     },
   },
   lineHeights: {
